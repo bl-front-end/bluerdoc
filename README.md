@@ -693,6 +693,42 @@ onInfinite | 滑动到底部的回调函数 | Function | | undefined
 
 <p class="danger">如果同时有下拉刷新和popup，actionsheet，datetime-picker，picker组件的时候，不能放到`<bl-scroll></bl-scroll>`里，不然其他组件会异常，因为下拉刷新的`div`给了绝对定位，`popup`组件是固定定位`bottom: 0`，如果刚好出现在绝对定位里，那么popup固定定位就会在页面最下面。解决办法就是两个组件分开。</p>
 
+
+#### Slide
+
+轮播图，需要搭配`slide-item`一起使用
+
+基本用法：
+
+```vue
+<bl-slide>
+  <bl-slide-item className="half">
+    <a href="javascript:;"><img _src="http://placeholder.qiniudn.com/750x375" alt=""></a>
+  </bl-slide-item>
+  <bl-slide-item className="half">
+    <a href="javascript:;"><img _src="http://placeholder.qiniudn.com/750x375" alt=""></a>
+  </bl-slide-item>
+</bl-slide>
+```
+
+API
+
+slide
+
+参数 | 说明 | 类型 | 可选值 | 默认值
+---|---
+className | 轮播图的class名字 | String | | 
+pagination | 是否启用下面的点点点分页导航， | Boolean | | true
+effect | 效果，支持 left、leftLoop | String | 'left','leftLoop' | 'leftloop'
+autoPlay | 自动播放 | Boolean | | false
+switchLoad | 图片的真实路径 | String | | '_src'
+
+slide-item
+
+参数 | 说明 | 类型 | 可选值 | 默认值
+---|---
+className | slide-item的class名字 | String | | 
+
 ### CSS Components
 
 #### Switch
