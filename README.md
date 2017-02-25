@@ -497,8 +497,8 @@ API
 ---|---
 position | popup 的位置。省略则居中显示 | String | 'top','right','bottom','left' |
 pop-transition | 显示/隐藏时的动效，仅在省略 position 时可配置 | String | 'popup-fade' | 'popup-slide'
-modal | 是否创建一个 modal 层	 | Boolean | | true
-closeOnClickModal | 是否可以通过点击 modal 层来关闭 popup | Boolean | | true
+modal | 是否创建一个 modal 层 | Boolean | - | true
+closeOnClickModal | 是否可以通过点击 modal 层来关闭 popup | Boolean | - | true
 
 Slot
 
@@ -565,7 +565,7 @@ key | 描述
 ---|---
 divider | 对应 slot 是否为分隔符
 content | 分隔符 slot 的显示文本
-values	| 对应 slot 的备选值数组。若为对象数组，则需在 mt-picker 标签上设置 value-key 属性来指定显示的字段名
+values  | 对应 slot 的备选值数组。若为对象数组，则需在 mt-picker 标签上设置 value-key 属性来指定显示的字段名
 defaultIndex | 对应 slot 初始选中值，需传入其在 values 数组中的序号，默认为 0
 textAlign | 对应 slot 的对齐方式
 flex | 对应 slot CSS 的 flex 值
@@ -575,10 +575,10 @@ API
 
 参数 | 说明 | 类型 | 可选值 | 默认值
 ---|---
-slots | slot 对象数组 | Array | | []
-valueKey | 当 values 为对象数组时，作为文本显示在 Picker 中的对应字段的字段名	 | String | | ''
-showToolbar | 是否在组件顶部显示一个 toolbar，内容自定义 | Boolean | | false
-visibleItemCount | slot 中可见备选值的个数 | Number | | 5
+slots | slot 对象数组 | Array | - | []
+valueKey | 当 values 为对象数组时，作为文本显示在 Picker 中的对应字段的字段名   | String | - | ''
+showToolbar | 是否在组件顶部显示一个 toolbar，内容自定义 | Boolean | - | false
+visibleItemCount | slot 中可见备选值的个数 | Number | - | 5
 
 Slot
 
@@ -650,17 +650,17 @@ API
 参数 | 说明 | 类型 | 可选值 | 默认值
 ---|---
 type | 组件的类型 | String | 'datetime', 'date', 'time' | 'datetime'
-cancelText | 取消按钮文本 | String | | '取消'
-confirmText | 确定按钮文本 | String | |	'确定'
-startDate | 日期的最小可选值 | Date | | 十年前的 1 月 1 日
-endDate | 日期的最大可选值 | Date | | 十年后的 12 月 31 日
-startHour | 小时的最小可选值 | Number | | 0
-endHour | 小时的最大可选值 | Number | | 23
-yearFormat | 年份模板 | String | | 	'{value}'
-monthFormat | 月份模板 | String | | '{value}'
-dateFormat | 日期模板 | String | | '{value}'
-hourFormat | 小时模板 | String | | '{value}'
-minuteFormat | 分钟模板 | String | | '{value}'
+cancelText | 取消按钮文本 | String | - | '取消'
+confirmText | 确定按钮文本 | String | - | '确定'
+startDate | 日期的最小可选值 | Date | - | 十年前的 1 月 1 日
+endDate | 日期的最大可选值 | Date | - | 十年后的 12 月 31 日
+startHour | 小时的最小可选值 | Number | - | 0
+endHour | 小时的最大可选值 | Number | - | 23
+yearFormat | 年份模板 | String | - | '{value}'
+monthFormat | 月份模板 | String | - | '{value}'
+dateFormat | 日期模板 | String | - | '{value}'
+hourFormat | 小时模板 | String | - | '{value}'
+minuteFormat | 分钟模板 | String | - | '{value}'
 
 Events
 
@@ -685,11 +685,11 @@ API
 
 参数 | 说明 | 类型 | 可选值 | 默认值
 ---|---
-offset | 下拉多少距离时触发下拉刷新操作 | Number | | 44
-enableInfinite | 是否启用滑动到底部加载更多 | Boolean | | true
-enableRefresh | 是否启用下拉刷新 | Boolean | | true
-onRefresh | 下拉刷新的回调函数 | Function | | undefined
-onInfinite | 滑动到底部的回调函数 | Function | | undefined
+offset | 下拉多少距离时触发下拉刷新操作 | Number | - | 44
+enableInfinite | 是否启用滑动到底部加载更多 | Boolean | - | true
+enableRefresh | 是否启用下拉刷新 | Boolean | - | true
+onRefresh | 下拉刷新的回调函数 | Function | - | undefined
+onInfinite | 滑动到底部的回调函数 | Function | - | undefined
 
 <p class="danger">如果同时有下拉刷新和popup，actionsheet，datetime-picker，picker组件的时候，不能放到`<bl-scroll></bl-scroll>`里，不然其他组件会异常，因为下拉刷新的`div`给了绝对定位，`popup`组件是固定定位`bottom: 0`，如果刚好出现在绝对定位里，那么popup固定定位就会在页面最下面。解决办法就是两个组件分开。</p>
 
@@ -702,10 +702,10 @@ onInfinite | 滑动到底部的回调函数 | Function | | undefined
 
 ```vue
 <bl-slide>
-  <bl-slide-item className="half">
+  <bl-slide-item>
     <a href="javascript:;"><img _src="http://placeholder.qiniudn.com/750x375" alt=""></a>
   </bl-slide-item>
-  <bl-slide-item className="half">
+  <bl-slide-item>
     <a href="javascript:;"><img _src="http://placeholder.qiniudn.com/750x375" alt=""></a>
   </bl-slide-item>
 </bl-slide>
@@ -717,17 +717,10 @@ slide
 
 参数 | 说明 | 类型 | 可选值 | 默认值
 ---|---
-className | 轮播图的class名字 | String | | 
-pagination | 是否启用下面的点点点分页导航， | Boolean | | true
+pagination | 是否启用下面的点点点分页导航| Boolean | - | true
 effect | 效果，支持 left、leftLoop | String | 'left','leftLoop' | 'leftloop'
-autoPlay | 自动播放 | Boolean | | false
-switchLoad | 图片的真实路径 | String | | '_src'
-
-slide-item
-
-参数 | 说明 | 类型 | 可选值 | 默认值
----|---
-className | slide-item的class名字 | String | | 
+autoPlay | 自动播放 | Boolean | - | false
+switchLoad | 图片的真实路径 | String | - | '_src'
 
 ### CSS Components
 
@@ -747,7 +740,7 @@ API
 
 参数 | 说明 | 类型 | 可选值 | 默认值
 ---|---
-value | 绑定值 | Boolean | | 
+value | 绑定值 | Boolean | - | -
 type | 显示颜色 | String | 'primary', 'pink', 'danger', 'orange', 'purple' | 'primary'
 
 #### Button
@@ -801,11 +794,11 @@ API
 
 参数 | 说明 | 类型 | 可选值 | 默认值
 ---|---
-disabled | 禁用状态 | Boolean | | false
+disabled | 禁用状态 | Boolean | - | false
 type | 按钮显示样式 | String | 'primary','secondary','other' | 'primary'
-size | 尺寸 | String | 'small','middle' |
-icon | 图标 | String | |
-inline | 普通按钮 | Boolean | | false
+size | 尺寸 | String | 'small','middle' | -
+icon | 图标 | String | - | -
+inline | 普通按钮 | Boolean | - | false
 
 Slot
 
@@ -850,14 +843,14 @@ navbar
 
 参数 | 说明 | 类型 | 可选值 | 默认值
 ---|---
-fixed | 固定在页面顶部 | Boolean | | false
-value | 返回当前选中的 tab-item 的 id | * | |
+fixed | 固定在页面顶部 | Boolean | - | false
+value | 返回当前选中的 tab-item 的 id | * | - | -
 
 tab-item
 
 参数 | 说明 | 类型 | 可选值 | 默认值
 ---|---
-id | 选中后的返回值 | * | |
+id | 选中后的返回值 | * | - | -
 
 #### tabContainer
 
@@ -888,14 +881,14 @@ tab-container
 
 参数 | 说明 | 类型 | 可选值 | 默认值
 ---|---
-swipeable | 显示滑动效果 | Boolean | | false
-value | 	当前激活的 id | * | |
+swipeable | 显示滑动效果 | Boolean | - | false
+value |   当前激活的 id | * | - | -
 
 tab-container-item
 
 参数 | 说明 | 类型 | 可选值 | 默认值
 ---|---
-id | item 的 id | * | |
+id | item 的 id | * | - | -
 
 ## 指南
 
