@@ -648,7 +648,7 @@ name | 描述
 API
 
 参数 | 说明 | 类型 | 可选值 | 默认值
----|---
+---|---|---|---|---
 type | 组件的类型 | String | 'datetime', 'date', 'time' | 'datetime'
 cancelText | 取消按钮文本 | String | - | '取消'
 confirmText | 确定按钮文本 | String | - | '确定'
