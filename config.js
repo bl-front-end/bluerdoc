@@ -1,6 +1,6 @@
 self.$config = {
   title: 'Bluer',
-  // true 将会默认使用 `landing.html`
+  // true 将会默认使用 `landing.html` h
   landing: true,
   // 也可以用自定义页面
   // 当然 markdown 文件也可以
