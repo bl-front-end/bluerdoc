@@ -468,7 +468,7 @@ this.$modal({
 API
 
 参数 | 说明 | 类型 | 可选值 | 默认值
----|---
+---|---|---|---|---
 actions | 菜单项数组 | Array | |
 cancelText | 取消按钮的文本。若设为空字符串，则不显示取消按钮 | String | | '取消'
 closeOnClickModal | 是否可以通过点击 modal 层来关闭 actionsheet | Boolean | | true
@@ -494,7 +494,7 @@ closeOnClickModal | 是否可以通过点击 modal 层来关闭 actionsheet | Bo
 API
 
 参数 | 说明 | 类型 | 可选值 | 默认值
----|---
+---|---|---|---|---
 position | popup 的位置。省略则居中显示 | String | 'top','right','bottom','left' |
 pop-transition | 显示/隐藏时的动效，仅在省略 position 时可配置 | String | 'popup-fade' | 'popup-slide'
 modal | 是否创建一个 modal 层 | Boolean | - | true
@@ -503,7 +503,7 @@ closeOnClickModal | 是否可以通过点击 modal 层来关闭 popup | Boolean 
 Slot
 
 name | 描述
----|---
+---|---|---|---|---
 - | popup弹出框的内容
 
 #### Picker
@@ -562,7 +562,7 @@ slots
 绑定到 `slots 属性的数组由对象组成，每个对象都对应一个 slot，它们有如下键名
 
 key | 描述
----|---
+---|---|---|---|---
 divider | 对应 slot 是否为分隔符
 content | 分隔符 slot 的显示文本
 values  | 对应 slot 的备选值数组。若为对象数组，则需在 mt-picker 标签上设置 value-key 属性来指定显示的字段名
@@ -574,7 +574,7 @@ className | 对应 slot 的类名
 API
 
 参数 | 说明 | 类型 | 可选值 | 默认值
----|---
+---|---|---|---|---
 slots | slot 对象数组 | Array | - | []
 valueKey | 当 values 为对象数组时，作为文本显示在 Picker 中的对应字段的字段名   | String | - | ''
 showToolbar | 是否在组件顶部显示一个 toolbar，内容自定义 | Boolean | - | false
@@ -584,7 +584,7 @@ Slot
 
 
 name | 描述
----|---
+---|---|---|---|---
 - | 当 showToolbar 为 true 时，toolbar 中的内容
 
 #### Datetime picker
@@ -666,7 +666,7 @@ Events
 
 
 事件名称 | 说明 | 回调参数
----|---
+---|---|---|---|---
 confirm | 点击确认按钮时的回调函数 | 目前的选择值
 
 #### Scroll
@@ -684,7 +684,7 @@ confirm | 点击确认按钮时的回调函数 | 目前的选择值
 API
 
 参数 | 说明 | 类型 | 可选值 | 默认值
----|---
+---|---|---|---|---
 offset | 下拉多少距离时触发下拉刷新操作 | Number | - | 44
 enableInfinite | 是否启用滑动到底部加载更多 | Boolean | - | true
 enableRefresh | 是否启用下拉刷新 | Boolean | - | true
@@ -716,7 +716,7 @@ API
 slide
 
 参数 | 说明 | 类型 | 可选值 | 默认值
----|---
+---|---|---|---|---
 pagination | 是否启用下面的点点点分页导航| Boolean | - | true
 effect | 效果，支持 left、leftLoop | String | 'left','leftLoop' | 'leftloop'
 autoPlay | 自动播放 | Boolean | - | false
@@ -739,7 +739,7 @@ switchLoad | 图片的真实路径 | String | - | '_src'
 API
 
 参数 | 说明 | 类型 | 可选值 | 默认值
----|---
+---|---|---|---|---
 value | 绑定值 | Boolean | - | -
 type | 显示颜色 | String | 'primary', 'pink', 'danger', 'orange', 'purple' | 'primary'
 
@@ -793,7 +793,7 @@ type | 显示颜色 | String | 'primary', 'pink', 'danger', 'orange', 'purple' |
 API
 
 参数 | 说明 | 类型 | 可选值 | 默认值
----|---
+---|---|---|---|---
 disabled | 禁用状态 | Boolean | - | false
 type | 按钮显示样式 | String | 'primary','secondary','other' | 'primary'
 size | 尺寸 | String | 'small','middle' | -
@@ -803,7 +803,7 @@ inline | 普通按钮 | Boolean | - | false
 Slot
 
 name | 描述
----|---
+---|---|---|---|---
 - | 显示的文本内容
 icon | 自定义显示的图标
 
@@ -842,14 +842,14 @@ API
 navbar
 
 参数 | 说明 | 类型 | 可选值 | 默认值
----|---
+---|---|---|---|---
 fixed | 固定在页面顶部 | Boolean | - | false
 value | 返回当前选中的 tab-item 的 id | * | - | -
 
 tab-item
 
 参数 | 说明 | 类型 | 可选值 | 默认值
----|---
+---|---|---|---|---
 id | 选中后的返回值 | * | - | -
 
 #### tabContainer
@@ -880,14 +880,14 @@ API
 tab-container
 
 参数 | 说明 | 类型 | 可选值 | 默认值
----|---
+---|---|---|---|---
 swipeable | 显示滑动效果 | Boolean | - | false
 value |   当前激活的 id | * | - | -
 
 tab-container-item
 
 参数 | 说明 | 类型 | 可选值 | 默认值
----|---
+---|---|---|---|---
 id | item 的 id | * | - | -
 
 ## 指南
